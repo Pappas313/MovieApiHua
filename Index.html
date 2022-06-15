@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Μovie-Api for HUA</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500|Open+Sans">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="styles/basic.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<style>
+	</style>
+	<script>
+	</script>
+</head>
+
+<body>
+	<div class="container-xl">
+		<div class="row">
+			<div class="col-lg-12">
+				<p></p>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<img class="mx-auto d-block" src="imgs/hua.png" width="150" height="150">
+						</div>
+					</div>
+				</div>
+				<h1 class="page-title">Μovie-Api for HUA</h1>
+				<div class="accordion" id="accordionExample">
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<h2 class="clearfix mb-0">
+								<a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+									aria-expanded="true" aria-controls="collapseOne">Αναζήτηση Ταινίας(Search Movies) <i
+										class="material-icons">add</i></a>
+							</h2>
+						</div>
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+							data-parent="#accordionExample">
+							<div class="d-flex justify-content-center alert-danger"><strong>Αναζήτηση ταινίας ανάλογα με
+									το Όνομα ή το ID της Ταινίας</strong></div>
+							<form id="search">
+								<fieldset align="center" id="fieldset">
+									<legend align="center">
+										<h2>ΑΞΙΟΛΟΓΗΣΕ ΤΑΙΝΙΕΣ</h2>
+									</legend>
+									<label for="id_name">
+										<h3>Αναζήτηση ταινίας με:</h3>
+									</label><br>
+									<select name="id_name" id="id_name" onchange="search_form_1()"><br>
+										<option value="select"><b>Επέλεξε</b></option>
+										<option value="name"><b>Με Βάση το Όνομα</b></option>
+										<option value="id"><b>Με Βάση τον Κωδικό της Ταινίας</b></option>
+									</select><br>
+									<br>
+									<div id=search_par></div>
+									<hr class="solid">
+									<div id=search_with_name></div>
+									<hr class="solid">
+									<div id=grade></div><br>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingTwo">
+							<h2 class="mb-0">
+								<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+									aria-expanded="false" aria-controls="collapseTwo">Πρόταση Ταινίας(Recommendation
+									Movies) <i class="material-icons">add</i></a>
+							</h2>
+						</div>
+						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+							data-parent="#accordionExample">
+							<div class="card-body"></div>
+							<form id="suggest">
+								<fieldset align="center" id="fieldset_2">
+									<legend align="center">
+										<h2>ΠΡΟΤΑΣΕΙΣ ΤΑΙΝΙΩΝ</h2>
+									</legend>
+									<input type='button' id="suggest_m" value='Προτεινε μου!' onclick="suggest()">
+									<div id="last"></div>
+									<div id="er"></div>
+									<ul id="uno"></ul>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingThree">
+							<h2 class="mb-0">
+								<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+									aria-expanded="false" aria-controls="collapseThree">Σημειώσεις(Notes) <i
+										class="material-icons">add</i></a>
+							</h2>
+						</div>
+						<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+							data-parent="#accordionExample">
+							<div class="card-body">
+								<p>
+									Tools: VSCode & Pinegrow<br>
+									www.w3schools.com<br>
+									getbootstrap.com<br>
+									developer.mozilla.org<br>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingFour">
+							<h2 class="mb-0">
+								<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+									aria-expanded="false" aria-controls="collapseFour">Στοιχεία Επικοινωνίας <i
+										class="material-icons">add</i></a>
+							</h2>
+						</div>
+						<div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+							data-parent="#accordionExample">
+							<div class="card-body">
+								<p>itp21105@hua.gr && hristos_g21@outlook.com</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingFive">
+							<h2 class="mb-0">
+								<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+									aria-expanded="false" aria-controls="collapseFive">Εκφώνηση<i
+										class="material-icons">add</i></a>
+							</h2>
+						</div>
+						<div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+							data-parent="#accordionExample">
+							<div class="card-body"></div>
+							<p>Λειτουργικότητα
+								Συγκεκριμένα η λειτουργικότητα που θα υποστηρίζει το frontend θα είναι η εξής:
+								• Αναζήτηση με τίτλο ταινίας και εμφάνιση στο frontend στοιχείων ταινίας με δομημένο
+								τρόπο
+								• Προσθήκη αξιολόγησης [0.5, 1, 1.5, 2, 2.5,..., 5] για την ταινία. Οι αξιολογήσεις θα
+								αποθηκεύονται σε ένα αντικείμενο για κάθε χρήστη στον client.
+								• Προβολή προτάσεων για ταινίες που το σύστημα εκτιμά ότι θα άρεσαν στο χρήστη.
+							</p><br>
+							<p>API (Backend)
+								URL: http://62.217.127.19:8010/movie
+								Μέθοδος: POST
+								Είσοδος: Ένα string ως json της μορφής {"keyword":"Toy"}
+								Έξοδος: Ένα json array με στοιχεία της/των ταινίας/ιών συμπεριλαμβανόμενου και του ID
+								της/τους (mID) που ξεκινούν από το input string.
+
+								URL: http://62.217.127.19:8010/movie/{mId}
+								Μέθοδος: GET
+								Είσοδος: mID ταινίας ως παράμετρο με τίτλο "id" στο HTTP request
+								Έξοδος: Ένα json array με τα στοιχεία της ταινίας
+
+
+								URL: http://62.217.127.19:8010/ratings
+								Μέθοδος: POST
+								Είσοδος: Ένα json που θα περιέχει ένα array με mID ταινιών της μορφής
+								{"movieList":[4,5,12]}
+								Έξοδος: Ένα json array με αξιολογήσεις για κάθε ταινία και κάθε χρήστη
+
+								URL: http://62.217.127.19:8010/ratings/{id}
+								Μέθοδος: GET
+								Είσοδος: uID χρήστη ως παράμετρο με τίτλο "id" στο HTTP request
+								Έξοδος: Ένα json array με τα ratings και τα υπόλοιπα στοιχεία των ταινιών τις οποίες ο
+								χρήστης uID έχει αξιολογήσει.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="scripts/main.js"></script>
+</body>
+
+</html>

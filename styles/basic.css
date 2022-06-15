@@ -1,0 +1,119 @@
+/* For Main Body */
+body {
+  background: #fff;
+}
+.accordion .card {
+  border-radius: 6px !important;
+  border: 1px solid #eceded !important;
+  margin-bottom: 5px;
+}
+.accordion .card .card-header {
+  background: #f9fafa;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+}
+.accordion .card-header:hover {
+  background: #ecf0f0;
+}
+.accordion .card-header h2 span {
+  float: left;
+  margin-top: 10px;
+}
+.accordion .card-header .btn {
+  color: #3659a2;
+  font-size: 1.04rem;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  top: -2px;
+  font-weight: 500;
+}
+.accordion .card-header i {
+  float: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+  position: relative;
+  top: 5px;
+}
+.accordion .card-header .btn:hover {
+  color: #35589f;
+}
+.accordion .card-body {
+  color: #324353;
+  text-align: justify;
+  border-top: 1px solid #eceded;
+}
+.page-title {
+  text-align: center;
+  margin: 2rem 0;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+.page-title::after {
+  content: "";
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 4px;
+  border-radius: 1px;
+  background: #3659a2;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+}
+/* For The Main Body */
+
+/* For The Application */
+input[type="button"] {
+  background-color: #3659a2;
+  border: black;
+  color: white;
+  padding: 08px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+fieldset {
+  text-align-last: center;
+}
+
+/*End For The Application */
+
+/* For The Table */
+#moviess {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#movies td,
+#movies th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#movies tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#movies tr:hover {
+  background-color: #ddd;
+}
+
+#movies th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #5d76ac;
+  color: black;
+}
+/*End For The Table */
